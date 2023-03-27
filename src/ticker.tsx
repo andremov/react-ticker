@@ -1,10 +1,13 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { v4 as uuidv4 } from 'uuid';
+import './ticker.css';
 
 type TickerProps = { children: JSX.Element[]; duration?: number };
 
-export const Ticker: React.FunctionComponent<TickerProps> = ({ children, duration = 10 }: TickerProps) => {
+export const Ticker: React.FunctionComponent<TickerProps> = ({
+  children,
+  duration = 10,
+}: TickerProps) => {
   const tickerRef = React.useRef<HTMLDivElement>(null);
   const [tickerUUID, setTickerUUID] = React.useState<string>('');
   const [tickerContentWidth, setTickerContentWidth] = React.useState<number>(2);
@@ -34,21 +37,15 @@ export const Ticker: React.FunctionComponent<TickerProps> = ({ children, duratio
   }, [tickerRef.current, tickerContentWidth]);
 
   return (
-    <div
-      className="FMT__container"
-      ref={tickerRef}
-      style={{
-        width: '100%',
-        height: '100%',
-        overflow: 'hidden',
-      }}
-    >
-      <motion.div
+    <div className="FMT__container" ref={tickerRef}>
+      <div
         className="FMT__container__contents"
-        initial={false}
-        animate={{ x: -tickerContentWidth }}
-        transition={{ ease: 'linear', duration, repeat: Infinity }}
-        style={{ display: 'flex' }}
+        style={
+          {
+            '--ticker-animation-duration': duration + 's',
+            '--ticker-animation-target': -tickerContentWidth + 'px',
+          } as React.CSSProperties
+        }
       >
         {children.map((item, index) => (
           <div key={index} id={`${tickerUUID}_${index}`}>
@@ -58,8 +55,7 @@ export const Ticker: React.FunctionComponent<TickerProps> = ({ children, duratio
         {[...Array(numDupes)].map((_) =>
           children.map((item, index) => <div key={index}>{item}</div>)
         )}
-      </motion.div>
+      </div>
     </div>
   );
 };
-

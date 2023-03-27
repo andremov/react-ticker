@@ -1,0 +1,23 @@
+.FMT__container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.FMT__container__contents {
+  display: flex;
+  animation-name: test;
+  animation-duration: var(--ticker-animation-duration);
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-timing-function: linear;
+}
+
+@keyframes test {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(var(--ticker-animation-target));
+  }
+}
