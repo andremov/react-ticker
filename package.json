@@ -1,21 +1,21 @@
 {
-  "name": "framer-motion-ticker",
-  "version": "1.0.16",
+  "name": "@andremov/react-ticker",
+  "version": "0.9.0",
   "description": "A React component that acts like a ticker, or marquee.",
   "author": "Andres Movilla <amovilla1103@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/andremov/framer-motion-ticker"
+    "url": "https://github.com/andremov/react-ticker"
   },
   "bugs": {
-    "url": "https://github.com/andremov/framer-motion-ticker/issues"
+    "url": "https://github.com/andremov/react-ticker/issues"
   },
-  "homepage": "https://github.com/andremov/framer-motion-ticker#readme",
+  "homepage": "https://github.com/andremov/react-ticker#readme",
   "scripts": {
     "prebuild": "rimraf dist",
     "start": "nodemon --watch . --exec npm run build -e ts,tsx",
-    "build": "npm run build:esm && npm run build:cjs && npm run build:types && copy src/ticker.css dist/ticker.css",
+    "build": "npm run build:esm && npm run build:cjs && npm run build:types",
     "build:esm": "cross-env BABEL_ENV=esm babel src --extensions .tsx -o dist/index.mjs",
     "build:cjs": "cross-env BABEL_ENV=cjs babel src --root-mode upward --extensions .tsx -o dist/index.js",
     "build:types": "tsc --emitDeclarationOnly --declaration --declarationDir dist && rimraf tsconfig.tsbuildinfo",

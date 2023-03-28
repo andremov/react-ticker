@@ -1,6 +1,6 @@
-# Framer Motion Ticker
+# React Ticker
 
-A simple ticker made with `framer-motion`. Infinitely and seamlessly scroll through elements.
+A simple ticker made for `React`. Infinitely and seamlessly scroll through elements.
 
 [![NPM Version][npm-version-image]][npm-url]
 [![NPM Install Size][npm-install-size-image]][npm-install-size-url]
@@ -9,14 +9,14 @@ A simple ticker made with `framer-motion`. Infinitely and seamlessly scroll thro
 # Installation
 
 ```
-npm install framer-motion-ticker
+npm install react-ticker
 ```
 
 ## Basic Usage
 
 ```jsx
 import React from 'react';
-import Ticker from 'framer-motion-ticker';
+import Ticker from 'react-ticker';
 
 function App() {
   const colors = ['#632bf3', '#f122c8', '#f16022', '#9ef344', '#44d3f3'];
@@ -43,9 +43,9 @@ export default App;
 
 ## Examples
 
-[Live Demo](https://framer-motion-ticker-example.netlify.app/)
+[Live Demo](https://react-ticker-example.netlify.app/)
 
-[example repo](https://github.com/andremov/framer-motion-ticker/tree/main/example)
+[example repo](https://github.com/andremov/react-ticker/tree/main/example)
 
 ## Ticker props
 
@@ -61,9 +61,9 @@ cd example && npm install
 npm run dev
 ```
 
-[npm-downloads-image]: https://badgen.net/npm/dm/framer-motion-ticker
-[npm-downloads-url]: https://npmcharts.com/compare/framer-motion-ticker?minimal=true
-[npm-install-size-image]: https://badgen.net/packagephobia/install/framer-motion-ticker
-[npm-install-size-url]: https://packagephobia.com/result?p=framer-motion-ticker
-[npm-url]: https://npmjs.org/package/framer-motion-ticker
-[npm-version-image]: https://badgen.net/npm/v/framer-motion-ticker
+[npm-downloads-image]: https://badgen.net/npm/dm/@andremov/react-ticker
+[npm-downloads-url]: https://npmcharts.com/compare/@andremov/react-ticker?minimal=true
+[npm-install-size-image]: https://badgen.net/packagephobia/install/@andremov/react-ticker
+[npm-install-size-url]: https://packagephobia.com/result?p=@andremov/react-ticker
+[npm-url]: https://npmjs.org/package/@andremov/react-ticker
+[npm-version-image]: https://badgen.net/npm/v/@andremov/react-ticker
