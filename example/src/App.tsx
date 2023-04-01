@@ -1,4 +1,4 @@
-import Ticker from '../../src';
+import Ticker from '@andremov/react-ticker';
 import React from 'react';
 
 function App() {

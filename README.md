@@ -9,14 +9,14 @@ A simple ticker made for `React`. Infinitely and seamlessly scroll through eleme
 # Installation
 
 ```
-npm install react-ticker
+npm install @andremov/react-ticker
 ```
 
 ## Basic Usage
 
 ```jsx
 import React from 'react';
-import Ticker from 'react-ticker';
+import Ticker from '@andremov/react-ticker';
 
 function App() {
   const colors = ['#632bf3', '#f122c8', '#f16022', '#9ef344', '#44d3f3'];

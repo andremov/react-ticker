@@ -4,10 +4,7 @@ import '../ticker.css';
 
 type TickerProps = { children: JSX.Element[]; duration?: number };
 
-export const Ticker: React.FunctionComponent<TickerProps> = ({
-  children,
-  duration = 10,
-}: TickerProps) => {
+const Ticker: React.FunctionComponent<TickerProps> = ({ children, duration = 10 }: TickerProps) => {
   const tickerRef = React.useRef<HTMLDivElement>(null);
   const [tickerUUID, setTickerUUID] = React.useState<string>('');
   const [tickerContentWidth, setTickerContentWidth] = React.useState<number>(2);
@@ -59,3 +56,5 @@ export const Ticker: React.FunctionComponent<TickerProps> = ({
     </div>
   );
 };
+
+export default Ticker;
